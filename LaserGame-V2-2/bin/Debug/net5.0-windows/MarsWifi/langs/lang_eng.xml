@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<root lang="chs" displyname="English" acp="49">
+	<global>
+		<text id="6" desp="limit state">[limited]</text>
+	</global>
+	<module id="1" name="wifi.exe">
+		<dlg id="0" name="unk">
+		</dlg>
+		<dlg id="91" name="Timed shutdown">
+			<text id="1">Not set</text>
+			<text id="2">Auto shutdown time: Every Day</text>
+			<text id="3">Auto shutdown time:</text>
+			<text id="99" >Timed shutdown</text>
+			<text id="1031" pos="75,20,170,45">Every day</text>
+			<text id="1032" pos="230,20,340,45">Only once</text>
+			<text id="1900">Not set</text>
+			<text id="1910">OK</text>
+			<text id="2400">Computer will shutdown in</text>
+			<text id="2930">Auto shutdown time:</text>
+			<text id="2910">Cancel</text>
+			<text id="3100">Computer will shutdown in</text>
+			<text id="3900">Cancel</text>			
+		</dlg>
+		<dlg id="99" name="main">
+			<text id="1">Show Mars WiFi</text>
+			<text id="2">Start WiFi Hotspot</text>
+			<text id="3">Stop WiFi Hotspot</text>
+			<text id="4">Restart WiFi Hotspot</text>
+			<text id="5">Settings</text>
+			<text id="6">Exit</text>
+			<text id="7">Mars WiFi Application</text>
+			<text id="8">Connected</text>
+			<text id="9">Blacklist</text>
+			<text id="99">Mars WiFi</text>
+			<text id="1206" pos="190,317,270,331">Change Pass</text>
+			<text id="2001">Start WiFi Hotspot</text>
+			<text id="2000">WiFi Name:</text>
+			<text id="2002">Password:</text>
+			<text id="10">Hotspot is Starting...</text>
+			<text id="11">Hotspot is Stoping...</text>
+			<text id="12">Hotspot is restarting...</text>
+			<text id="13">WiFi Hotspot Started, enjoy!</text>
+			<text id="14">WiFi Hotspot Start failed!</text>
+			<text id="15">WiFi Hotspot Stoped</text>
+			<text id="16">Offline</text>
+			<text id="17">Timed shutdown</text>
+		</dlg>
+		<dlg id="95" name="change pass">
+			<text id="1">Passwords must be 5 or 10 number! </text>
+			<text id="2">Passwords must be at least 8 character!</text>
+			<text id="3">Please enter WiFi Name!</text>
+			<text id="99">WiFi - Change Pass</text>
+			<text id="1207">WiFi Name</text>
+			<text id="1206">Password</text>
+			<text id="1211">Save</text>
+
+		</dlg>
+		<dlg id="96" name="setting">
+			<text id="99">Settings</text>
+			<text id="10001">Normal</text>
+			<text id="10002">Advance</text>
+			<text id="10003">Remind</text>
+			<text id="1010">Start Mode：</text>
+			<text id="1012">Launch at computer startup</text>
+			<text id="1013">Language：</text>
+			<text id="1030">Upadte：</text>
+			<text id="1031">Automatic upadte</text>
+			<text id="1032">Manual update</text>
+			<text id="2010">Share Mode：</text>			
+			<text id="2011">NAT</text>
+			<text id="2012">ICS</text>
+			<text id="2020">WiFi frequency：</text>
+			<text id="2030">Hide SSID：</text>
+			<text id="2031">Show</text>
+			<text id="2032">Hide</text>
+			<text id="2040">NetCard：</text>
+			<text id="2041">Auto</text>
+			<text id="2042">External</text>
+			<text id="3001">Save</text>
+			<text id="4010">Start WiFi Hotspot：</text>			
+			<text id="4011">Always remind</text>
+			<text id="4012">Close reminder</text>
+			<text id="4020">Equipment connected：</text>
+			<text id="4021">Always remind</text>
+			<text id="4022">Close reminder</text>
+		</dlg>
+		<dlg id="97" name="about">
+			<text id="99">About us</text>
+			<text id="1">Version</text>
+			<text id="400" pos="170,204,275,224">Official website</text>
+			<text id="200">Mars WiFi Application</text>					
+		</dlg>
+		<dlg id="93" name="limitspeed">
+			<text id="99">Speed Limited</text>
+			<text id="1211">Save</text>
+		</dlg>
+		<dlg id="94" name="change nick">
+			<text id="99">Edit Display Name</text>
+			<text id="2010">Please enter a display name：</text>
+			<text id="1211">Save</text>
+		</dlg>
+		<dlg id="98" name="pop menu">
+			<text id="999">Donations</text>
+			<text id="1000">Help</text>
+			<text id="1001">Upgrade</text>
+			<text id="1002">Feedback</text>
+			<text id="1003">About us</text>
+			<text id="1004">Change name</text>
+			<text id="1005">Speed limit</text>
+			<text id="1006">Delete</text>
+			<text id="1007">Add to blacklist</text>
+			<text id="1008">Remove blacklist</text>
+			<text id="1009">Settings</text>
+		</dlg>
+		<dlg id="92" name="notify pop">
+			<text id="101">Hotspot is Starting...</text>
+			<text id="201">WiFi Hotspot Started, enjoy!</text>
+			<text id="301">Start failed, please try again!</text>
+			<text id="302">Help</text>
+			<text id="303">Retry</text>
+			<text id="401">Still failed,please click the help!</text>
+			<text id="403">Help</text>
+			<text id="501">Unknown error,reboot and try again!</text>
+			<text id="502">Reboot</text>
+			<text id="601">NIC driver exception!</text>
+			<text id="602">Ignore</text>
+			<text id="603">Help</text>
+			<text id="701">No wireless network card!</text>
+			<text id="702">Retry</text>
+			<text id="703">Buy</text>
+			<text id="801">XP systems are limited!</text>
+			<text id="802">Retry</text>
+			<text id="803">Help</text>
+			<text id="901">Not support,buy an external card!</text>
+			<text id="903">Buy</text>
+			<text id="1001">Configuration errors,immediate repair!</text>
+			<text id="1003">Repair</text>
+			<text id="1102">Join WiFi</text>
+			<text id="1103">Manager</text>
+		</dlg>
+	</module>
+	<module id="2" name="update">
+		<dlg id="99" name="main">
+			<text id="1" >Mars WiFi Update</text>
+			<text id="2" >Downloading updates...</text>
+			<text id="3" >Replace files...</text>
+			<text id="4" >Download failed!</text>
+			<text id="5" >Replace file failed!</text>
+			<text id="101" >Checking updates...</text>
+			<text id="201" >Checking failed,try again later</text>
+			<text id="203" >Retry</text>
+			<text id="301" >It is up to date and no upgrade</text>
+			<text id="303" >OK</text>
+			<text id="401" >Detects a new version,please update</text>
+			<text id="403" >Update</text>
+			<text id="501" >Detects a new version</text>
+			<text id="503" >Update</text>
+			<text id="603" >Minimum</text>
+			<text id="701" >The update is successful！</text>
+			<text id="703" >Ok</text>
+			<text id="801" >Updated successfully,please reboot!</text>
+			<text id="803" >Reboot</text>
+			<text id="901" >Updated successfully,please reboot!</text>
+			<text id="903" >Reboot</text>
+			<text id="1003" >Retry</text>
+		</dlg>
+	</module>
+	<module id="3" name="uninst">
+		<dlg id="99" name="main">
+			<text id="1" >Mars WiFi Uninstaller</text>
+			<text id="2" >UnInstallation</text>
+			<text id="99" >Unistall Mars WiFi</text>
+			<text id="1101" >Uninstall</text>
+			<text id="4200" >Uninstall drivers and component</text>
+		</dlg>
+	</module>
+</root>

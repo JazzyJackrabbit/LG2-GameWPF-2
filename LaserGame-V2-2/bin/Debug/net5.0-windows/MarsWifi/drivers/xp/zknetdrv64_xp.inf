@@ -1,0 +1,114 @@
+; -- zknetdrv_xp.INF --
+;
+; this is the INF for the service (protocol) part
+;
+; Copyright (c) ZKY  Resources.  All rights reserved.
+;
+; ----------------------------------------------------------------------
+
+[Version]
+Signature  = "$Windows NT$"
+Class      = NetService
+ClassGUID  = {4D36E974-E325-11CE-BFC1-08002BE10318}
+Provider   = %Ntkr%
+DriverVer = 01/01/2015,3.1.3
+CatalogFile=zknetdrv.cat
+
+[Manufacturer]
+%Ntkr% = NTKR,NTx86,NTia64,NTamd64
+
+[ControlFlags]
+
+;=========================================================================
+;
+;=========================================================================
+;For Win2K
+
+[NTKR]
+%ZKNetDrv_Desc% = ZKNetDrv.ndi, ZKNetDrv
+ 
+;For WinXP and later
+
+[NTKR.NTx86]
+%ZKNetDrv_Desc% = ZKNetDrv.ndi, ZKNetDrv
+
+[NTKR.NTia64]
+%ZKNetDrv_Desc% = ZKNetDrv.ndi, ZKNetDrv
+
+[NTKR.NTamd64]
+%ZKNetDrv_Desc% = ZKNetDrv.ndi, ZKNetDrv
+
+
+[ZKNetDrv.ndi]
+AddReg          = ZKNetDrv.ndi.AddReg, ZKNetDrv.AddReg
+Characteristics = 0x4410 ;  NCF_FILTER | NCF_NDIS_PROTOCOL !--Filter Specific--!!
+
+[ZKNetDrv.ndi.Remove]
+DelFiles = ZKNetDrv.Files.Sys
+
+[ZKNetDrv.ndi.Services]
+AddService = ZKNetDrv,, ZKNetDrv.AddService
+
+[ZKNetDrv.AddService]
+DisplayName    = %ZKNetDrvService_Desc%
+ServiceType    = 1 ;SERVICE_KERNEL_DRIVER
+StartType      = 3 ;SERVICE_DEMAND_START
+ErrorControl   = 1 ;SERVICE_ERROR_NORMAL
+ServiceBinary  = %12%\zknetdrv64_xp.sys
+AddReg         = ZKNetDrv.AddService.AddReg
+
+
+[ZKNetDrv.AddService.AddReg]
+; ----------------------------------------------------------------------
+; Add any miniport-specific parameters here.  These are params that your
+; filter device is going to use.
+;
+;HKR, Parameters, ParameterName,  0x10000, "MultiSz", "Parameter", "Value"
+;HKR, Parameters, ParameterName2, 0x10001, 4
+
+
+; ----------------------------------------------------------------------
+; File copy
+;
+
+; ----------------------------------------------------------------------
+; Filter Install
+;
+
+[ZKNetDrv.ndi.AddReg]
+HKR, Ndi, HelpText, , %ZKNetDrv_HELP%
+
+; ----------------------------------------------------------------------
+; !!--Filter Specific--!!
+;
+; Note:
+; 1. Other components may also have UpperRange/LowerRange but for filters
+;    the value of both of them must be noupper/nolower
+; 2. The value FilterClass is required.
+; 3. The value Service is required
+; 4. FilterDeviceInfId is the InfId of the filter device (miniport) that will
+;    be installed for each filtered adapter.
+;    In this case this is zknetdrvmp (refer to zknetdrv_m.inf)
+;
+HKR, Ndi,            FilterClass,         , failover
+HKR, Ndi,            FilterDeviceInfId,   , ZKNetDrvmp
+HKR, Ndi,            Service,             , ZKNetDrv
+HKR, Ndi\Interfaces, UpperRange,          , noupper
+HKR, Ndi\Interfaces, LowerRange,          , nolower
+HKR, Ndi\Interfaces, FilterMediaTypes,    , "ethernet, wan"
+
+[ZKNetDrv.AddReg]
+; The following key is Required
+; The following key is zknetdrv specific
+HKR, Parameters, Param1, 0, 4
+
+; ----------------------------------------------------------------------
+[Strings]
+Ntkr = "ZK WiFi"
+DiskDescription = "ZK NET Driver" 
+
+ZKNetDrv_Desc = "ZK NET Driver" 
+ZKNetDrv_HELP = "ZK NET Driver" 
+ZKNetDrvService_Desc = "ZK NET Driver" 
+
+

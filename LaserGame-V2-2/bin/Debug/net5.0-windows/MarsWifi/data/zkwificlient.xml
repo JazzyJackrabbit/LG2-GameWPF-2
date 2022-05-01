@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<root>
+    <item mac="3C6105CFB0B80000" count="135" dev="ESP-CFB0B8" ip="192.168.191.3" dl="35520" up="0" />
+    <item mac="3C6105D15B830000" count="18" dev="ESP-D15B83" ip="192.168.191.3" dl="4800" up="0" />
+    <item mac="3C6105D0B2530000" count="118" dev="ESP-D0B253" ip="192.168.191.2" dl="27200" up="0" />
+    <item mac="8CAAB57C26D80000" count="4" dev="ESP-7C26D8" ip="192.168.191.4" dl="1920" up="0" />
+</root>

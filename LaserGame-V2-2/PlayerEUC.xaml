@@ -1,0 +1,49 @@
+﻿<UserControl x:Class="LaserGame_V2_2.PlayerEUC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:LaserGame_V2_2"
+             mc:Ignorable="d" 
+             d:DesignHeight="30" d:DesignWidth="770" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+    <Grid x:Name="grid_content">
+        <Grid x:Name="grid_background" Background="#000" HorizontalAlignment="Left" Width="40"/>
+        <Grid x:Name="grid_infos" Background="#fff" Margin="40,0,0,0" PreviewMouseDown="grid_infos_PreviewMouseDown">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Grid x:Name="grid_info1" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Label x:Name="lb1_ip" Content="IP" FontWeight="Bold"/>
+            </Grid>
+            <Grid x:Name="grid_info2" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Label x:Name="lb2_id" Content="ID LASER" FontWeight="Bold"/>
+            </Grid>
+            <Grid x:Name="grid_info3" Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Label x:Name="lb3_pseudo" Content="PSEUDO" FontWeight="Bold"/>
+            </Grid>
+            <Grid x:Name="grid_info4" Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Label x:Name="lb4_team" Content="TEAM" FontWeight="Bold"/>
+            </Grid>
+            <Grid x:Name="grid_info5" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Label x:Name="lb5_color" Content="COLOR" FontWeight="Bold" />
+            </Grid>
+            <Grid x:Name="grid_info6" Grid.Column="5" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Label x:Name="lb6_kill" Content="KILL" FontWeight="Bold"/>
+            </Grid>
+            <Grid x:Name="grid_info7" Grid.Column="6" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Label x:Name="lb7_death" Content="DEATH" FontWeight="Bold"/>
+            </Grid>
+            <Grid x:Name="grid_info8" Grid.Column="7" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Label x:Name="lb8_score" Content="SCORE" FontWeight="Bold"/>
+            </Grid>
+        </Grid>
+
+    </Grid>
+</UserControl>

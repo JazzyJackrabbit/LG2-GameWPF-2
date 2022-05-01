@@ -1,0 +1,81 @@
+; -- zknetdrv_xp_M.INF --
+;
+; zknetdrv_xp Miniport INF file
+;
+; Copyright (c) ZKY Resources.  All rights reserved.
+
+; ----------------------------------------------------------------------
+
+[Version]
+signature  = "$Windows NT$"
+Class      = Net
+ClassGUID  = {4d36e972-e325-11ce-bfc1-08002be10318}
+Provider   = %Ntkr%
+DriverVer = 01/01/2015,3.1.3
+CatalogFile=zknetdrv.cat
+
+[ControlFlags]
+ExcludeFromSelect = ZKNetDrvmp
+
+[DestinationDirs]
+DefaultDestDir=12
+; No files to copy 
+
+[Manufacturer]
+%Ntkr% = NTKR,NTx86,NTia64,NTamd64
+
+;For Win2K
+
+[NTKR]
+%ZKNetDrvMP_Desc% = ZKNetDrvMP.ndi, ZKNetDrvmp
+
+;For WinXP and later
+
+[NTKR.NTx86]
+%ZKNetDrvMP_Desc% = ZKNetDrvMP.ndi, ZKNetDrvmp
+
+[NTKR.NTia64]
+%ZKNetDrvMP_Desc% = ZKNetDrvMP.ndi, ZKNetDrvmp
+
+[NTKR.NTamd64]
+%ZKNetDrvMP_Desc% = ZKNetDrvMP.ndi, ZKNetDrvmp
+
+
+[ZKNetDrvMP.ndi]
+AddReg  = ZKNetDrvMP.ndi.AddReg
+Characteristics = 0x29 ;NCF_NOT_USER_REMOVABLE | NCF_VIRTUAL | NCF_HIDDEN
+
+[ZKNetDrvMP.ndi.AddReg]
+HKR, Ndi, Service,  0,  ZKNetDrvMP
+
+[ZKNetDrvMP.ndi.Services]
+AddService = ZKNetDrvMP,0x2, ZKNetDrvMP.AddService
+
+
+[ZKNetDrvMP.AddService]
+ServiceType    = 1 ;SERVICE_KERNEL_DRIVER
+StartType      = 3 ;SERVICE_DEMAND_START
+ErrorControl   = 1 ;SERVICE_ERROR_NORMAL
+ServiceBinary  = %12%\zknetdrv64_xp.sys
+AddReg         = ZKNetDrvMP.AddService.AddReg
+
+
+[ZKNetDrvMP.AddService.AddReg]
+; ----------------------------------------------------------------------
+; Add any miniport-specific parameters here.  These are params that your
+; filter device is going to use.
+;
+;HKR, Parameters, ParameterName,  0x10000, "MultiSz", "Parameter", "Value"
+;HKR, Parameters, ParameterName2, 0x10001, 4
+
+[Strings]
+Ntkr = "ZK WiFi"
+ZKNetDrvMP_Desc = "ZK NET Driver"
+
+[SourceDisksNames]
+;None 
+
+[SourceDisksFiles]
+;None
+
+

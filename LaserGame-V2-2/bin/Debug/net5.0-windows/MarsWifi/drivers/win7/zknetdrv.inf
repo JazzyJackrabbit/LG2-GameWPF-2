@@ -1,0 +1,70 @@
+;-------------------------------------------------------------------------
+; zknetdrv.INF -- ZK WiFi NDIS LWF driver
+;
+; Copyright (c) zky Resources.  All rights reserved.
+;-------------------------------------------------------------------------
+[version]
+Signature   	= "$Windows NT$"
+Class     	= NetService
+ClassGUID  	= {4D36E974-E325-11CE-BFC1-08002BE10318}
+Provider    	= %Ntkr%
+CatalogFile=zknetdrv.cat
+DriverVer=01/01/2015,1.1.1
+
+[Manufacturer]
+%Ntkr%=Ntkr,NTx86,NTia64,NTamd64
+
+[Ntkr.NTx86]
+%ZKNetDrv_Desc%=Install, zknetdrv
+
+[Ntkr.NTia64]
+%ZKNetDrv_Desc%=Install, zknetdrv
+
+[Ntkr.NTamd64]
+%ZKNetDrv_Desc%=Install, zknetdrv
+
+;-------------------------------------------------------------------------
+; Installation Section
+;-------------------------------------------------------------------------
+[Install]
+AddReg=Inst_Ndi
+Characteristics=0x40000
+NetCfgInstanceId="{ECF6F105-22E8-4dd6-BF3D-BF92A1A61BD7}"
+
+
+;-------------------------------------------------------------------------
+; Ndi installation support
+;-------------------------------------------------------------------------
+[Inst_Ndi]
+HKR, Ndi,Service,,"zknetdrv"
+HKR, Ndi,CoServices,0x00010000,"zknetdrv"
+HKR, Ndi,HelpText,,%ZKNetDrv_HelpText%
+HKR, Ndi,FilterClass,, compression
+HKR, Ndi,FilterType,0x00010001,0x00000002
+HKR, Ndi\Interfaces,UpperRange,,"noupper"
+HKR, Ndi\Interfaces,LowerRange,,"nolower"
+HKR, Ndi\Interfaces, FilterMediaTypes,,"ethernet, wan, ppip"
+HKR, Ndi,FilterRunType, 0x00010001, 1 ;this filter must run before any protocol can bind to the below miniport 
+
+;-------------------------------------------------------------------------
+; Service installation support
+;-------------------------------------------------------------------------
+[Install.Services]
+AddService=zknetdrv,,ZKNetDrv_Service_Inst
+
+[ZKNetDrv_Service_Inst]
+DisplayName     = %ZKNetDrv_Desc%
+ServiceType     = 1 ;SERVICE_KERNEL_DRIVER
+StartType       = 1 ;SERVICE_SYSTEM_START
+ErrorControl    = 1 ;SERVICE_ERROR_NORMAL
+ServiceBinary   = %12%\zknetdrv.sys
+LoadOrderGroup  = NDIS
+Description     = %ZKNetDrv_Desc%
+
+[Install.Remove.Services]
+DelService=zknetdrv,0x200
+
+[Strings]
+Ntkr = "ZK WiFi"
+ZKNetDrv_Desc = "ZK NET Driver"
+ZKNetDrv_HelpText = "ZK NET Driver"

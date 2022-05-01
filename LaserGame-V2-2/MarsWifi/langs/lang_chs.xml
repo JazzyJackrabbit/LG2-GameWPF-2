@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<root lang="chs" displyname="简体中文" acp="936">
+	<global>
+		<text id="0" desp="offical web">http://www.zkytech.com/</text>
+		<text id="1" desp="help">http://www.zkytech.com/v2/support.html</text>
+		<text id="2" desp="update url">http://icn.zkytech.com/upgrade/</text>
+		<text id="3" desp="report url">http://icn.zkytech.com/report/</text>
+		<text id="4" desp="protocol url">http://www.zkytech.com/v2/support.html</text>
+		<text id="5" desp="feedback url">http://www.zkytech.com/v2/pages/feedback.html</text>
+	</global>
+	<module id="1" name="wifi.exe">
+		<dlg id="0" name="unk">
+		</dlg>
+		<dlg id="91" name="time shutoff">
+		</dlg>
+		<dlg id="99" name="main">
+			<text id="7">火星WiFi</text><!--title-->
+			<text id="99">火星WiFi</text>
+			<text id="1">显示主界面</text>
+			<text id="2">开启WiFi</text>
+			<text id="3">关闭WiFi</text>
+			<text id="4">重启WiFi</text>
+			<text id="5">设置中心</text>
+			<text id="6">退出</text>
+			<text id="8">设备列表</text>
+			<text id="9">黑名单</text>
+			<text id="2001">开启WiFi</text>
+			<text id="2000">WiFi名称：</text>
+			<text id="2002">WiFi密码：</text>
+			<text id="10">WiFi 正在开启...</text>
+			<text id="11">WiFi 正在关闭...</text>
+			<text id="12">WiFi 正在重启...</text>
+			<text id="13">WiFi 已开启</text>
+			<text id="14">WiFi 开启失败</text>
+			<text id="15">WiFi 已关闭</text>
+			<text id="16">离线</text>
+			<text id="17">离线</text>
+		</dlg>
+		<dlg id="95" name="change pass">
+			<text id="99">WiFi - 修改密码</text>
+			<text id="1207">WiFi名称</text>
+			<text id="1206">WiFi密码</text>
+			<text id="1211">保存</text>
+
+		</dlg>
+		<dlg id="96" name="setting">
+			<text id="99">WiFi - 设置</text>
+			<text id="10001">基本设置</text>
+			<text id="10002">高级设置</text>
+			<text id="10003">提醒设置</text>
+			<text id="1010">开启方式：</text>
+			<text id="1012">开机自动启动</text>
+			<text id="1013">语言选择：</text>
+			<text id="1030">升级方式：</text>
+			<text id="1031">自动升级</text>
+			<text id="1032">手动升级</text>
+			<text id="2010">共享模式：</text>
+			<text id="2011">NAT</text>
+			<text id="2012">ICS</text>
+			<text id="2020">无线频段：</text>
+			<text id="2030">隐藏SSID：</text>
+			<text id="2031">显示</text>
+			<text id="2032">隐藏</text>
+			<text id="2040">网卡选择：</text>
+			<text id="2041">自动选择</text>
+			<text id="2042">外置网卡优先</text>
+			<text id="3001">保存</text>
+			<text id="4010">WiFi 开启：</text>			
+			<text id="4011">总是提醒</text>
+			<text id="4012">关闭提醒</text>
+			<text id="4020">设备连入：</text>
+			<text id="4021">总是提醒</text>
+			<text id="4022">关闭提醒</text>
+		</dlg>
+		<dlg id="97" name="about">		
+			<text id="99">WiFi - 关于</text>
+			<text id="1">版本信息</text>
+			<text id="400">访问官网</text>
+			<text id="200">火星WiFi应用程序</text>
+		</dlg>
+		<dlg id="93" name="limitspeed">
+			<text id="99">WiFi - 限速</text>
+			<text id="1211">保存</text>
+		</dlg>
+		<dlg id="94" name="change nick">
+			<text id="99">火星WiFi - 备注</text>
+			<text id="2010">请输入备注名称:</text>
+			<text id="1211">保存</text>
+		</dlg>
+		<dlg id="98" name="pop menu">
+			<text id="1000">帮助</text>
+			<text id="1001">升级</text>
+			<text id="1002">反馈</text>
+			<text id="1003">关于</text>
+			<text id="1004">修改昵称</text>
+			<text id="1005">限速</text>
+			<text id="1006">删除</text>
+			<text id="1007">加入黑名单</text>
+			<text id="1008">从黑名单移除</text>
+			<text id="1009">设置</text>
+		</dlg>
+		<dlg id="92" name="notify pop">
+			<text id="101">正在开启火星WiFi...</text>
+			<text id="201">火星WiFi开启成功，欢迎使用！</text>
+			<text id="301">WiFi开启失败了，请重试！</text>
+			<text id="302">帮助教程</text>
+			<text id="303">再次开启</text>
+			<text id="401">依旧开启失败了，请点击帮助教程！</text>
+			<text id="403">帮助教程</text>
+			<text id="501">未知错误，请重启电脑尝试</text>
+			<text id="502">重启电脑</text>
+			<text id="601">网卡驱动异常，若开启电脑可能蓝屏！</text>
+			<text id="602">依旧开启</text>
+			<text id="603">修复教程</text>
+			<text id="701">未找到无线网卡，请插入外置网卡！</text>
+			<text id="702">再次开启</text>
+			<text id="703">立即购买</text>
+			<text id="801">无线网卡被占用，请购买外置网卡！</text>
+			<text id="802">依旧开启</text>
+			<text id="803">帮助教程</text>
+			<text id="901">无线网卡不支持，建议购买外置网卡！</text>
+			<text id="903">立即购买</text>
+			<text id="1001">无线网卡配置错误,建议立即修复！</text>
+			<text id="1003">立即修复</text>
+			<text id="1102">已经连入您的WiFi</text>
+			<text id="1103">管理设备</text>
+		</dlg>
+	</module>
+	<module id="2" name="update">
+		<dlg id="99" name="main">
+			<text id="99" >火星WiFi</text>
+			<text id="1" >火星WiFi升级程序</text>
+			<text id="2" >正在下载升级文件...</text>
+			<text id="3" >正在更新升级文件...</text>
+			<text id="4" >升级文件下载失败</text>
+			<text id="5" >更新升级文件失败</text>
+			<text id="101" >正在检查升级信息...</text>
+			<text id="201" >检查升级信息失败,请稍候重试</text>
+			<text id="203" >重试</text>
+			<text id="301" >已是最新版本,无需升级</text>
+			<text id="303" >确定</text>
+			<text id="401" >发现新的软件包,下载更新</text>
+			<text id="403" >下载</text>
+			<text id="501" >有可用的更新文件，建议升级</text>
+			<text id="503" >立即升级</text>
+			<text id="603" >后台升级</text>
+			<text id="701" >升级成功，当前版本已是最新</text>
+			<text id="703" >确定</text>
+			<text id="801" >升级成功，重启软件后生效</text>
+			<text id="803" >立即重启</text>
+			<text id="901" >升级成功，重启电脑后生效</text>
+			<text id="903" >立即重启</text>
+			<text id="1003" >重试</text>
+		</dlg>
+	</module>
+	<module id="3" name="uninst">
+		<dlg id="99" name="main">
+			<text id="1" >火星WiFi卸载程序</text>
+			<text id="2" >卸载已完成</text>
+			<text id="99" >卸载火星WiFi</text>
+			<text id="1101" >立即卸载</text>
+			<text id="4200" >正在卸载驱动和组件...</text>
+		</dlg>
+	</module>
+</root>
